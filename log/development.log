@@ -200,3 +200,395 @@ Entrypoint application = js/application-0dce064923c9a06380d2.js js/application-0
 Completed 200 OK in 24096ms (Views: 24042.0ms | ActiveRecord: 20.0ms | Allocations: 136177)
 
 
+Started GET "/" for ::1 at 2021-04-19 21:49:14 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GardensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.6ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.6ms | Allocations: 216)
+  Rendered gardens/_garden_card.html.erb (Duration: 1.0ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 48)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 181.2ms | Allocations: 38147)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 427)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 235.8ms | Allocations: 51909)
+Completed 200 OK in 263ms (Views: 232.8ms | ActiveRecord: 6.9ms | Allocations: 56429)
+
+
+Started GET "/" for ::1 at 2021-04-19 21:49:21 +0200
+Processing by GardensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.5ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 50)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.5ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 48)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 13.6ms | Allocations: 3208)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 276)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.3ms | Allocations: 16117)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.5ms | Allocations: 16417)
+
+
+Started GET "/gardens/10" for ::1 at 2021-04-19 21:49:35 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mGarden Load (0.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 10]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/_plant_card.html.erb (Duration: 0.8ms | Allocations: 214)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered gardens/show.html.erb within layouts/application (Duration: 215.8ms | Allocations: 246293)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 461)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 254.9ms | Allocations: 259176)
+Completed 200 OK in 284ms (Views: 255.1ms | ActiveRecord: 3.7ms | Allocations: 268111)
+
+
+Started GET "/gardens/7" for ::1 at 2021-04-19 22:10:52 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGarden Load (0.5ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.9ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 7]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/_plant_card.html.erb (Duration: 0.5ms | Allocations: 61)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.3ms | Allocations: 50)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.4ms | Allocations: 50)
+  Rendered gardens/show.html.erb within layouts/application (Duration: 24.3ms | Allocations: 6821)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 460)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.8ms | Allocations: 19707)
+Completed 200 OK in 81ms (Views: 47.4ms | ActiveRecord: 11.0ms | Allocations: 22571)
+
+
+Started GET "/gardens/8" for ::1 at 2021-04-19 22:10:57 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mGarden Load (2.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.9ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 8]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/_plant_card.html.erb (Duration: 0.6ms | Allocations: 61)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.3ms | Allocations: 50)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.4ms | Allocations: 50)
+  Rendered gardens/show.html.erb within layouts/application (Duration: 26.1ms | Allocations: 6803)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 460)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.5ms | Allocations: 19688)
+Completed 200 OK in 65ms (Views: 53.0ms | ActiveRecord: 3.2ms | Allocations: 20489)
+
+
+Started GET "/gardens/11" for ::1 at 2021-04-19 22:11:01 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mGarden Load (0.6ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 11]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/_plant_card.html.erb (Duration: 0.6ms | Allocations: 61)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.4ms | Allocations: 50)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.4ms | Allocations: 50)
+  Rendered gardens/show.html.erb within layouts/application (Duration: 24.9ms | Allocations: 6803)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 460)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.5ms | Allocations: 19686)
+Completed 200 OK in 55ms (Views: 49.0ms | ActiveRecord: 1.3ms | Allocations: 20471)
+
+
+Started GET "/gardens/12" for ::1 at 2021-04-19 22:11:05 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mGarden Load (1.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 12]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/_plant_card.html.erb (Duration: 0.4ms | Allocations: 61)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.3ms | Allocations: 50)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.3ms | Allocations: 50)
+  Rendered gardens/show.html.erb within layouts/application (Duration: 23.5ms | Allocations: 6798)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 460)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.9ms | Allocations: 19681)
+Completed 200 OK in 56ms (Views: 48.4ms | ActiveRecord: 1.8ms | Allocations: 20465)
+
+
+Started GET "/gardens/new" for ::1 at 2021-04-19 22:11:33 +0200
+Processing by GardensController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/new.html.erb within layouts/application
+  Rendered gardens/new.html.erb within layouts/application (Duration: 26.2ms | Allocations: 8640)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 462)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.5ms | Allocations: 21530)
+Completed 200 OK in 52ms (Views: 50.7ms | ActiveRecord: 0.0ms | Allocations: 21949)
+
+
+Started GET "/gardens/7" for ::1 at 2021-04-19 22:11:45 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGarden Load (0.6ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 7]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/_plant_card.html.erb (Duration: 0.5ms | Allocations: 62)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.4ms | Allocations: 50)
+  Rendered gardens/_plant_card.html.erb (Duration: 0.3ms | Allocations: 50)
+  Rendered gardens/show.html.erb within layouts/application (Duration: 21.0ms | Allocations: 6805)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 460)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.0ms | Allocations: 19688)
+Completed 200 OK in 49ms (Views: 43.7ms | ActiveRecord: 1.2ms | Allocations: 20473)
+
+
+Started GET "/" for ::1 at 2021-04-19 22:12:36 +0200
+Processing by GardensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.5ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 50)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.2ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.7ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 48)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 3195)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 275)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.6ms | Allocations: 16101)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.5ms | Allocations: 16389)
+
+
+Started GET "/gardens/new" for ::1 at 2021-04-19 22:12:41 +0200
+Processing by GardensController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/new.html.erb within layouts/application
+  Rendered gardens/new.html.erb within layouts/application (Duration: 47.4ms | Allocations: 6086)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 461)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 75.0ms | Allocations: 18977)
+Completed 200 OK in 81ms (Views: 78.1ms | ActiveRecord: 0.0ms | Allocations: 19269)
+
+
+Started POST "/gardens" for ::1 at 2021-04-19 22:13:25 +0200
+Processing by GardensController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DOVzgSrsJY0QCEeRcydGDPGXZDZnhSE4/MCgx/RdDFGr48gn+BwDR49Op41R8KTdS+5H+qvrg513WU/BJedVgQ==", "garden"=>{"name"=>"mon jardin", "banner_url"=>"https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.valagro.com%2Fmedia%2Ffiler_public_thumbnails%2Ffiler_public%2F49%2Ff5%2F49f5300a-37b6-4245-b460-c7fe58f7a374%2Fbanner-1.jpg__1400x500_q85_HIGH_RESOLUTION_crop_subsampling-2.jpg&imgrefurl=https%3A%2F%2Fwww.valagro.com%2Ffrance%2Ffr%2F&tbnid=vpfwWXxsYGdTxM&vet=12ahUKEwiHvveoj4vwAhUngM4BHcFxBx8QMygDegUIARCwAQ..i&docid=nbaO6GzJakcU0M&w=1400&h=500&q=banner%20plant&ved=2ahUKEwiHvveoj4vwAhUngM4BHcFxBx8QMygDegUIARCwAQ"}, "commit"=>"Create Garden"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[36mGarden Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "mon jardin"], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[36mGarden Create (0.7ms)[0m  [1m[32mINSERT INTO "gardens" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "mon jardin"], ["banner_url", "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.valagro.com%2Fmedia%2Ffiler_public_thumbnails%2Ffiler_public%2F49%2Ff5%2F49f5300a-37b6-4245-b460-c7fe58f7a374%2Fbanner-1.jpg__1400x500_q85_HIGH_RESOLUTION_crop_subsampling-2.jpg&imgrefurl=https%3A%2F%2Fwww.valagro.com%2Ffrance%2Ffr%2F&tbnid=vpfwWXxsYGdTxM&vet=12ahUKEwiHvveoj4vwAhUngM4BHcFxBx8QMygDegUIARCwAQ..i&docid=nbaO6GzJakcU0M&w=1400&h=500&q=banner%20plant&ved=2ahUKEwiHvveoj4vwAhUngM4BHcFxBx8QMygDegUIARCwAQ"], ["created_at", "2021-04-19 20:13:25.895220"], ["updated_at", "2021-04-19 20:13:25.895220"]]
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gardens_controller.rb:18:in `create'
+Redirected to http://localhost:3000/gardens/13
+Completed 302 Found in 25ms (ActiveRecord: 11.5ms | Allocations: 3330)
+
+
+Started GET "/gardens/13" for ::1 at 2021-04-19 22:13:25 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mGarden Load (0.5ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 13]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/show.html.erb within layouts/application (Duration: 16.0ms | Allocations: 6404)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 461)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.6ms | Allocations: 19288)
+Completed 200 OK in 43ms (Views: 39.2ms | ActiveRecord: 1.1ms | Allocations: 20072)
+
+
+Started POST "/gardens/13/plants" for ::1 at 2021-04-19 22:14:31 +0200
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gedmMf970qoqoREy7dhk4EG4l4FCqF2U9tZGNzQ3TGkm4d2XLYv0YLXn8S7PD4Yx+8G0TY7G/zF9T6kx5Y0VuQ==", "plant"=>{"name"=>"bonsaï japonais", "image_url"=>"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.fr%2FCJardin_LMDLN%2Fbonsa%25C3%25AF-japonais%2F&psig=AOvVaw3mEvfQl7oMgaDJ0HOgStbr&ust=1618949651651000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKiY4smPi_ACFQAAAAAdAAAAABAG"}, "commit"=>"Add", "garden_id"=>"13"}
+  [1m[36mGarden Load (0.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:3:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:6:in `create'
+  [1m[36mPlant Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "bonsaï japonais"], ["garden_id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:6:in `create'
+  [1m[36mPlant Create (0.9ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 13], ["name", "bonsaï japonais"], ["image_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.fr%2FCJardin_LMDLN%2Fbonsa%25C3%25AF-japonais%2F&psig=AOvVaw3mEvfQl7oMgaDJ0HOgStbr&ust=1618949651651000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKiY4smPi_ACFQAAAAAdAAAAABAG"], ["created_at", "2021-04-19 20:14:31.237782"], ["updated_at", "2021-04-19 20:14:31.237782"]]
+  ↳ app/controllers/plants_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (14.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:6:in `create'
+Redirected to http://localhost:3000/gardens/13
+Completed 302 Found in 35ms (ActiveRecord: 16.8ms | Allocations: 3545)
+
+
+Started GET "/gardens/13" for ::1 at 2021-04-19 22:14:31 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mGarden Load (0.4ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 13]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/_plant_card.html.erb (Duration: 0.6ms | Allocations: 61)
+  Rendered gardens/show.html.erb within layouts/application (Duration: 18.7ms | Allocations: 6546)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 460)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.5ms | Allocations: 19429)
+Completed 200 OK in 49ms (Views: 44.3ms | ActiveRecord: 0.7ms | Allocations: 20214)
+
+
+Started GET "/" for ::1 at 2021-04-19 22:14:49 +0200
+Processing by GardensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.6ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.7ms | Allocations: 49)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.5ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.5ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.6ms | Allocations: 48)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 20.9ms | Allocations: 3312)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 275)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.7ms | Allocations: 16214)
+Completed 200 OK in 51ms (Views: 49.2ms | ActiveRecord: 0.6ms | Allocations: 16502)
+
+
+Started GET "/gardens/13" for ::1 at 2021-04-19 22:14:54 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mGarden Load (0.7ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 13]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/_plant_card.html.erb (Duration: 0.7ms | Allocations: 61)
+  Rendered gardens/show.html.erb within layouts/application (Duration: 34.2ms | Allocations: 6553)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 460)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 80.2ms | Allocations: 19438)
+Completed 200 OK in 89ms (Views: 81.0ms | ActiveRecord: 1.4ms | Allocations: 20240)
+
+
+Started GET "/gardens/new" for ::1 at 2021-04-19 22:15:25 +0200
+Processing by GardensController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/new.html.erb within layouts/application
+  Rendered gardens/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 6092)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 461)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 18983)
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.0ms | Allocations: 19275)
+
+
+Started GET "/gardens/new" for ::1 at 2021-04-19 22:16:40 +0200
+Processing by GardensController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/new.html.erb within layouts/application
+  Rendered gardens/new.html.erb within layouts/application (Duration: 14.6ms | Allocations: 6096)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 461)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.3ms | Allocations: 18988)
+Completed 200 OK in 62ms (Views: 61.3ms | ActiveRecord: 0.0ms | Allocations: 19281)
+
+
+Started GET "/gardens/13" for ::1 at 2021-04-19 22:28:04 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mGarden Load (1.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 13]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/_plant_card.html.erb (Duration: 0.3ms | Allocations: 61)
+  Rendered gardens/show.html.erb within layouts/application (Duration: 18.9ms | Allocations: 6573)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 460)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.2ms | Allocations: 19456)
+Completed 200 OK in 54ms (Views: 37.0ms | ActiveRecord: 7.4ms | Allocations: 22300)
+
+
+Started GET "/" for ::1 at 2021-04-19 22:28:08 +0200
+Processing by GardensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (1.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 49)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.3ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.5ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.5ms | Allocations: 48)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 24.9ms | Allocations: 3312)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 275)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 50.1ms | Allocations: 16220)
+Completed 200 OK in 54ms (Views: 51.3ms | ActiveRecord: 1.2ms | Allocations: 16508)
+
+
+Started GET "/gardens/13" for ::1 at 2021-04-19 22:28:38 +0200
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mGarden Load (0.4ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 13]]
+  ↳ app/views/gardens/show.html.erb:9
+  Rendered gardens/_plant_card.html.erb (Duration: 0.5ms | Allocations: 61)
+  Rendered gardens/show.html.erb within layouts/application (Duration: 19.8ms | Allocations: 6553)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 460)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.3ms | Allocations: 19436)
+Completed 200 OK in 45ms (Views: 39.8ms | ActiveRecord: 1.1ms | Allocations: 20220)
+
+

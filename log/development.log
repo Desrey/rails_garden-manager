@@ -1,0 +1,202 @@
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5952389427026727090)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5952389427026727090)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-04-19 21:00:59 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GardensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/index.html.erb within layouts/application
+  Rendered gardens/index.html.erb within layouts/application (Duration: 198.2ms | Allocations: 39547)
+  Rendered layout layouts/application.html.erb (Duration: 199.6ms | Allocations: 39679)
+Completed 500 Internal Server Error in 230ms (ActiveRecord: 0.0ms | Allocations: 46210)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: bootstrap/scss/bootstrap.
+        on line 7:1 of app/assets/stylesheets/application.scss
+>> @import "bootstrap/scss/bootstrap";
+
+   ^
+):
+  
+app/assets/stylesheets/application.scss:7
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mGarden Load (2.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Load (2.0ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 1]]
+  [1m[36mPlant Destroy (1.2ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 1]]
+  [1m[36mPlant Destroy (0.8ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 2]]
+  [1m[36mPlant Destroy (0.6ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 3]]
+  [1m[36mGarden Destroy (0.9ms)[0m  [1m[31mDELETE FROM "gardens" WHERE "gardens"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (20.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Load (1.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 2]]
+  [1m[36mPlant Destroy (0.6ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 4]]
+  [1m[36mPlant Destroy (0.8ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 5]]
+  [1m[36mPlant Destroy (4.1ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 6]]
+  [1m[36mGarden Destroy (1.1ms)[0m  [1m[31mDELETE FROM "gardens" WHERE "gardens"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (27.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 3]]
+  [1m[36mPlant Destroy (0.5ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 7]]
+  [1m[36mPlant Destroy (0.5ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 8]]
+  [1m[36mPlant Destroy (0.6ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 9]]
+  [1m[36mGarden Destroy (0.7ms)[0m  [1m[31mDELETE FROM "gardens" WHERE "gardens"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Load (0.8ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 4]]
+  [1m[36mPlant Destroy (0.6ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 10]]
+  [1m[36mPlant Destroy (0.5ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 11]]
+  [1m[36mPlant Destroy (0.7ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 12]]
+  [1m[36mGarden Destroy (0.9ms)[0m  [1m[31mDELETE FROM "gardens" WHERE "gardens"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 5]]
+  [1m[36mPlant Destroy (1.9ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 13]]
+  [1m[36mPlant Destroy (0.7ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 14]]
+  [1m[36mPlant Destroy (3.3ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 15]]
+  [1m[36mGarden Destroy (1.5ms)[0m  [1m[31mDELETE FROM "gardens" WHERE "gardens"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (18.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Load (1.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."garden_id" = $1[0m  [["garden_id", 6]]
+  [1m[36mPlant Destroy (1.2ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 16]]
+  [1m[36mPlant Destroy (0.6ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 17]]
+  [1m[36mPlant Destroy (0.7ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 18]]
+  [1m[36mGarden Destroy (1.8ms)[0m  [1m[31mDELETE FROM "gardens" WHERE "gardens"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGarden Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "French garden"], ["LIMIT", 1]]
+  [1m[36mGarden Create (1.0ms)[0m  [1m[32mINSERT INTO "gardens" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "French garden"], ["banner_url", "https://images.unsplash.com/photo-1618673713291-2d5edaf0ad9c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=700&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODMx&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200"], ["created_at", "2021-04-19 19:17:12.915214"], ["updated_at", "2021-04-19 19:17:12.915214"]]
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Armand Hammer"], ["garden_id", 7], ["LIMIT", 1]]
+  [1m[36mPlant Create (1.1ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 7], ["name", "Armand Hammer"], ["image_url", "https://images.unsplash.com/photo-1618595831975-b8387a7e4d57?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODMy&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400"], ["created_at", "2021-04-19 19:17:17.155096"], ["updated_at", "2021-04-19 19:17:17.155096"]]
+  [1m[36mTRANSACTION (18.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Igor Beaver"], ["garden_id", 7], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.7ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 7], ["name", "Igor Beaver"], ["image_url", "https://images.unsplash.com/photo-1618679623071-2d7eea984ec9?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODM5&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400"], ["created_at", "2021-04-19 19:17:21.199738"], ["updated_at", "2021-04-19 19:17:21.199738"]]
+  [1m[36mTRANSACTION (16.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Andy Structible"], ["garden_id", 7], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.9ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 7], ["name", "Andy Structible"], ["image_url", "https://images.unsplash.com/photo-1618664362697-5bf94e9aac44?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODQz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400"], ["created_at", "2021-04-19 19:17:24.058823"], ["updated_at", "2021-04-19 19:17:24.058823"]]
+  [1m[36mTRANSACTION (16.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGarden Exists? (4.0ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "My Cute Balcony"], ["LIMIT", 1]]
+  [1m[36mGarden Create (9.3ms)[0m  [1m[32mINSERT INTO "gardens" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "My Cute Balcony"], ["banner_url", "https://images.unsplash.com/photo-1618253665873-60414d40197e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=700&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODQ2&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200"], ["created_at", "2021-04-19 19:17:26.981901"], ["updated_at", "2021-04-19 19:17:26.981901"]]
+  [1m[36mTRANSACTION (16.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Douglas Furr"], ["garden_id", 8], ["LIMIT", 1]]
+  [1m[36mPlant Create (1.0ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 8], ["name", "Douglas Furr"], ["image_url", "https://images.unsplash.com/photo-1618657281312-3561f625519f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODQ2&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400"], ["created_at", "2021-04-19 19:17:27.886799"], ["updated_at", "2021-04-19 19:17:27.886799"]]
+  [1m[36mTRANSACTION (17.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Cole Durkee"], ["garden_id", 8], ["LIMIT", 1]]
+  [1m[36mPlant Create (6.1ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 8], ["name", "Cole Durkee"], ["image_url", "https://images.unsplash.com/photo-1618656947873-83370ad34951?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODU0&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400"], ["created_at", "2021-04-19 19:17:35.034813"], ["updated_at", "2021-04-19 19:17:35.034813"]]
+  [1m[36mTRANSACTION (16.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Owen Moore"], ["garden_id", 8], ["LIMIT", 1]]
+  [1m[36mPlant Create (2.1ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 8], ["name", "Owen Moore"], ["image_url", "https://images.unsplash.com/photo-1618753364933-6b9bee73b442?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODU3&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400"], ["created_at", "2021-04-19 19:17:39.392872"], ["updated_at", "2021-04-19 19:17:39.392872"]]
+  [1m[36mTRANSACTION (20.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGarden Exists? (6.7ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "English garden"], ["LIMIT", 1]]
+  [1m[36mGarden Create (0.9ms)[0m  [1m[32mINSERT INTO "gardens" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "English garden"], ["banner_url", "https://images.unsplash.com/photo-1618253665734-b93167ca36de?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=700&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODYx&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200"], ["created_at", "2021-04-19 19:17:42.594070"], ["updated_at", "2021-04-19 19:17:42.594070"]]
+  [1m[36mTRANSACTION (16.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Al B. Zienya"], ["garden_id", 9], ["LIMIT", 1]]
+  [1m[36mPlant Create (8.7ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 9], ["name", "Al B. Zienya"], ["image_url", "https://images.unsplash.com/photo-1618627197026-c1576802e3e5?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODYy&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400"], ["created_at", "2021-04-19 19:17:43.573678"], ["updated_at", "2021-04-19 19:17:43.573678"]]
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (8.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (4.8ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Hal E. Luya"], ["garden_id", 9], ["LIMIT", 1]]
+  [1m[36mPlant Create (7.3ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 9], ["name", "Hal E. Luya"], ["image_url", "https://images.unsplash.com/photo-1618680209090-ecb43a513fb2?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODY1&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400"], ["created_at", "2021-04-19 19:17:46.489636"], ["updated_at", "2021-04-19 19:17:46.489636"]]
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Faye Tallity"], ["garden_id", 9], ["LIMIT", 1]]
+  [1m[36mPlant Create (9.7ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 9], ["name", "Faye Tallity"], ["image_url", "https://images.unsplash.com/photo-1618673886008-ce444c548713?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODY4&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400"], ["created_at", "2021-04-19 19:17:49.376683"], ["updated_at", "2021-04-19 19:17:49.376683"]]
+  [1m[36mTRANSACTION (20.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGarden Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "Flowered patio"], ["LIMIT", 1]]
+  [1m[36mGarden Create (0.6ms)[0m  [1m[32mINSERT INTO "gardens" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Flowered patio"], ["banner_url", "https://images.unsplash.com/photo-1618701355809-1bc96183f61b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=700&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODcx&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200"], ["created_at", "2021-04-19 19:17:54.707538"], ["updated_at", "2021-04-19 19:17:54.707538"]]
+  [1m[36mTRANSACTION (20.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (11.7ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Matt Tress"], ["garden_id", 10], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.8ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 10], ["name", "Matt Tress"], ["image_url", "https://images.unsplash.com/photo-1618657276840-5f1789bd1d6e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODc0&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400"], ["created_at", "2021-04-19 19:17:55.746236"], ["updated_at", "2021-04-19 19:17:55.746236"]]
+  [1m[36mTRANSACTION (26.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Jane Linkfence"], ["garden_id", 10], ["LIMIT", 1]]
+  [1m[36mPlant Create (6.1ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 10], ["name", "Jane Linkfence"], ["image_url", "https://images.unsplash.com/photo-1618657076833-010cd5ed3930?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODc3&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400"], ["created_at", "2021-04-19 19:17:58.695487"], ["updated_at", "2021-04-19 19:17:58.695487"]]
+  [1m[36mTRANSACTION (22.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Val Crow"], ["garden_id", 10], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.9ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 10], ["name", "Val Crow"], ["image_url", "https://images.unsplash.com/photo-1618666927082-aaa206bfe425?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODgw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400"], ["created_at", "2021-04-19 19:18:01.612269"], ["updated_at", "2021-04-19 19:18:01.612269"]]
+  [1m[36mTRANSACTION (31.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGarden Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "Garden in Japan"], ["LIMIT", 1]]
+  [1m[36mGarden Create (1.1ms)[0m  [1m[32mINSERT INTO "gardens" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Garden in Japan"], ["banner_url", "https://images.unsplash.com/photo-1618734658666-6405e358f4ac?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=700&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODgz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200"], ["created_at", "2021-04-19 19:18:04.676768"], ["updated_at", "2021-04-19 19:18:04.676768"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Harry Legg"], ["garden_id", 11], ["LIMIT", 1]]
+  [1m[36mPlant Create (1.2ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 11], ["name", "Harry Legg"], ["image_url", "https://images.unsplash.com/photo-1618628464064-7eccc83c3e5c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODg0&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400"], ["created_at", "2021-04-19 19:18:05.581021"], ["updated_at", "2021-04-19 19:18:05.581021"]]
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Anne Teak"], ["garden_id", 11], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.6ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 11], ["name", "Anne Teak"], ["image_url", "https://images.unsplash.com/photo-1618765559190-4c5431175919?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODg4&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400"], ["created_at", "2021-04-19 19:18:09.232767"], ["updated_at", "2021-04-19 19:18:09.232767"]]
+  [1m[36mTRANSACTION (27.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Barry Shmelly"], ["garden_id", 11], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.6ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 11], ["name", "Barry Shmelly"], ["image_url", "https://images.unsplash.com/photo-1618661642554-2e2da4efcd5d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODkx&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400"], ["created_at", "2021-04-19 19:18:12.163565"], ["updated_at", "2021-04-19 19:18:12.163565"]]
+  [1m[36mTRANSACTION (28.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGarden Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "gardens" WHERE "gardens"."name" = $1 LIMIT $2[0m  [["name", "Walk among flowers"], ["LIMIT", 1]]
+  [1m[36mGarden Create (2.9ms)[0m  [1m[32mINSERT INTO "gardens" ("name", "banner_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Walk among flowers"], ["banner_url", "https://images.unsplash.com/photo-1618250167563-95a13d9c1f06?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=700&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODk0&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200"], ["created_at", "2021-04-19 19:18:16.227815"], ["updated_at", "2021-04-19 19:18:16.227815"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Buddy System"], ["garden_id", 12], ["LIMIT", 1]]
+  [1m[36mPlant Create (5.9ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 12], ["name", "Buddy System"], ["image_url", "https://images.unsplash.com/photo-1618604250649-4db4695369d8?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODk2&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400"], ["created_at", "2021-04-19 19:18:17.132773"], ["updated_at", "2021-04-19 19:18:17.132773"]]
+  [1m[36mTRANSACTION (17.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Doug Updegrave"], ["garden_id", 12], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.9ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 12], ["name", "Doug Updegrave"], ["image_url", "https://images.unsplash.com/photo-1618604250649-4db4695369d8?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5ODk5&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400"], ["created_at", "2021-04-19 19:18:20.022205"], ["updated_at", "2021-04-19 19:18:20.022205"]]
+  [1m[36mTRANSACTION (17.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "plants" WHERE "plants"."name" = $1 AND "plants"."garden_id" = $2 LIMIT $3[0m  [["name", "Mike Czech"], ["garden_id", 12], ["LIMIT", 1]]
+  [1m[36mPlant Create (0.7ms)[0m  [1m[32mINSERT INTO "plants" ("garden_id", "name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["garden_id", 12], ["name", "Mike Czech"], ["image_url", "https://images.unsplash.com/photo-1618644480211-c0eeca9b4c3f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODU5OTAy&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400"], ["created_at", "2021-04-19 19:18:22.843797"], ["updated_at", "2021-04-19 19:18:22.843797"]]
+  [1m[36mTRANSACTION (17.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2021-04-19 21:18:47 +0200
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GardensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (1.5ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:42
+  Rendered gardens/_garden_card.html.erb (Duration: 4.0ms | Allocations: 221)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.5ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.8ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 6.3ms | Allocations: 48)
+  Rendered gardens/_garden_card.html.erb (Duration: 0.4ms | Allocations: 48)
+  Rendered gardens/index.html.erb within layouts/application (Duration: 10936.7ms | Allocations: 113548)
+  Rendered shared/_navbar.html.erb (Duration: 2.2ms | Allocations: 427)
+  Rendered shared/_footer.html.erb (Duration: 1.6ms | Allocations: 92)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/yandes91/code/Desrey/rails_garden-manager/public/packs
+[Webpacker] Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+
+[Webpacker] Hash: 0f5bce8aa0dcadcb53e8
+Version: webpack 4.43.0
+Time: 4601ms
+Built at: 04/19/2021 9:19:11 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-0dce064923c9a06380d2.js    507 KiB  application  [emitted] [immutable]  application
+js/application-0dce064923c9a06380d2.js.map    636 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-0dce064923c9a06380d2.js js/application-0dce064923c9a06380d2.js.map
+[./app/javascript/packs/application.js] 19 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 472 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 24047.3ms | Allocations: 131659)
+Completed 200 OK in 24096ms (Views: 24042.0ms | ActiveRecord: 20.0ms | Allocations: 136177)
+
+
